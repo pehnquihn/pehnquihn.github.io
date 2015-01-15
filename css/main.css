@@ -97,21 +97,69 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+    font-family: "Segoe UI Light", "Segoe UI", Serif;
+}
 
+body {
+    background: url("../img/background.png");
+    background-position: center;
+    background-repeat: repeat-y;
+    background-color: #000;
+    background-attachment: fixed;
+}
 
+header {
+    width: 90%;
+    background-color: rgba(27, 161, 226, 0.5);
+    margin: 24px 0 0;
+    padding: 0 5% 5px;
+    font-size: 48px;
+    color: #fff;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
 
+section {
+    margin: 96px auto 0;
+    text-align: center;
+}
 
+article {
+    text-align: left;
+    width: 384px;
+    display: inline-block;
+    margin: 24px 24px 0 0;
+    padding: 24px 24px 0;
+    background-color: #fff;
+    color: #000;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #fff;
+}
 
+article #header {
+    font-size: 36px;
+    text-align: center;
+    border-bottom: 2px #000 solid;
+}
 
+article #links ul {
+    list-style-type: none;
+}
 
+article #links img {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    bottom: 4px;
+}
 
-
-
-
-
-
-
-
+article #links li a {
+    text-decoration: none !important;
+    color: #222;
+    font-size: 24px;
+}
 
 /* ==========================================================================
    Helper classes
