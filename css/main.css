@@ -119,6 +119,7 @@ header {
     position: fixed;
     left: 0px;
     top: 0px;
+    text-align: center;
 }
 
 section {
@@ -130,6 +131,7 @@ article {
     text-align: left;
     width: 360px;
     display: inline-block;
+    vertical-align: middle;
     margin: 24px;
     padding: 24px 24px 0;
     background-color: #fff;
