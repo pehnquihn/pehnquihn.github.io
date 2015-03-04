@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<TITLE>List Box Test</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function testSelect(form) {
+
+	$('#pic').show();
+	
+	if(form.list.selectedIndex == 0) {
+		if(form.list2.selectedIndex == 0){
+			$('#pic').html("<table><tr><td><img src='children.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 1){
+			$('#pic').html("<table><tr><td><img src='cyclocross.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 2){
+			$('#pic').html("<table><tr><td><img src='e-bike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 3){
+			$('#pic').html("<table><tr><td><img src='foldingbike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+	}
+	if(form.list.selectedIndex == 1) {
+		if(form.list2.selectedIndex == 3){
+			$('#pic').html("<table><tr><td><img src='children.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 2){
+			$('#pic').html("<table><tr><td><img src='cyclocross.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 1){
+			$('#pic').html("<table><tr><td><img src='e-bike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 0){
+			$('#pic').html("<table><tr><td><img src='foldingbike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+	}
+	if(form.list.selectedIndex == 2) {
+		if(form.list2.selectedIndex == 1){
+			$('#pic').html("<table><tr><td><img src='children.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 2){
+			$('#pic').html("<table><tr><td><img src='cyclocross.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 3){
+			$('#pic').html("<table><tr><td><img src='e-bike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 0){
+			$('#pic').html("<table><tr><td><img src='foldingbike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+	}
+	if(form.list.selectedIndex == 3) {
+		if(form.list2.selectedIndex == 2){
+			$('#pic').html("<table><tr><td><img src='children.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 3){
+			$('#pic').html("<table><tr><td><img src='cyclocross.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 0){
+			$('#pic').html("<table><tr><td><img src='e-bike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+		if(form.list2.selectedIndex == 1){
+			$('#pic').html("<table><tr><td><img src='foldingbike.jpg' width='150px;' height='150px'><p>name of bike</p></td></tr></table>")
+		}
+	}
+}
+</SCRIPT>
+
+<style>
+#bike_selector{
+	width:600px;
+	margin:auto;
+	margin-top: 50px;
+	padding: 15px;
+	border: 2px solid #000;
+	
+}
+
+</style>
+<script src="jquery-1.10.2.min.js"></script>
+</HEAD>
+<BODY>
+<div id="bike_selector">
+<FORM NAME="bikeChoice" ACTION="" METHOD="GET">
+Use for Bike:
+<select NAME="list" SIZE="1">
+	<OPTION value='0'>Mainly Road Races</option>
+	<OPTION value='1'>Mainly off Road/trail riding</option>
+	<OPTION value='2'>Leisurely riding in trail and road</option>
+	<OPTION value='3'>Cyclocross racing</option>
+</select>
+<br>
+<br>
+Price Range:
+<SELECT NAME="list2" SIZE="1">
+	<OPTION>Less than $500</option>
+	<OPTION>Between $500 and $1000</option>
+	<OPTION>Between $1000 and $2000</option>
+	<OPTION>More than $2000</option>
+</SELECT>
+
+<br>
+<INPUT style="float:right;" TYPE="button" NAME="button" Value="Find My Perfect Bike" onClick="testSelect(this.form)">
+</FORM>
+</br>
+<div id="pic" style="border:1px solid red; display:none;">
+<p>Your Perfect Bike</p>
+
+</div>
+</div>
+</BODY>
+</HTML>
